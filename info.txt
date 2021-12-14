@@ -1,1 +1,8 @@
-Bhavesh
+Name: Bhavesh Mankar
+Age: 19
+Address: Asma Nagar, Bhojapur Road
+City: Bhandara
+State: Maharashtra
+Pincode: 441904
+Phone Number: 9096521406
+Email: bhaweshmankar2002@gmail.com
