@@ -15,7 +15,7 @@ void get_info() // A function that requests general information from the user
     int phone_num;
     std::string email;
 
-    ofstream data("info.txt",i);
+    ofstream data("info.txt",ios::out);
 
     // Requesting general information from the user
     // Name
