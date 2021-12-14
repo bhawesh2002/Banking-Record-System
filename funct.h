@@ -6,54 +6,82 @@ using namespace std;
 
 void get_info() // A function that requests general information from the user
 {
-    std::string name;
+    string name;
     int age;
-    std::string address;
-    std::string city;
-    std::string state;
+    string address;
+    string city;
+    string state;
     int pincode;
     int phone_num;
-    std::string email;
+    string email;
 
     ofstream data("info.txt", ios::out); // creation of ofstream obj to store general info in "info.txt"
 
     // Requesting general information from the user
     // Name
-    std::cout << "Enter your name: ";
-    getline(std::cin, name);
+    cout << "Enter your name: ";
+    getline(cin, name);
     data << "Name: " << name << endl;
     // Age
-    std::cout << "Enter your age: ";
-    std::cin >> age;
+    cout << "Enter your age: ";
+    cin >> age;
     data << "Age: " << age << endl;
     // Address
-    std::cout << "Enter your address: ";
-    std::cin.clear();
-    std::cin.ignore();
-    getline(std::cin, address);
+    cout << "Enter your address: ";
+    cin.clear();
+    cin.ignore();
+    getline(cin, address);
     data << "Address: " << address << endl;
     // City
-    std::cout << "Enter your city: ";
-    getline(std::cin, city);
+    cout << "Enter your city: ";
+    getline(cin, city);
     data << "City: " << city << endl;
     // State
-    std::cout << "Enter your state: ";
-    getline(std::cin, state);
+    cout << "Enter your state: ";
+    getline(cin, state);
     data << "State: " << state << endl;
     // Pincode
-    std::cout << "Enter your pincode: ";
-    std::cin >> pincode;
+    cout << "Enter your pincode: ";
+    cin >> pincode;
     data << "Pincode: " << pincode << endl;
     // Phone number
-    std::cout << "Enter your phone number: ";
-    std::cin >> phone_num;
+    cout << "Enter your phone number: ";
+    cin >> phone_num;
     data << "Phone Number: " << phone_num << endl;
     // Email
-    std::cout << "Enter your email: ";
-    std::cin.clear();
-    std::cin.ignore();
-    getline(std::cin, email);
+    cout << "Enter your email: ";
+    cin.clear();
+    cin.ignore();
+    getline(cin, email);
     data << "Email: " << email << endl;
 
     data.close(); // close the info.txt file;
+}
+
+void set_cred() // A function that requests credentials from the user
+{
+    string username;
+    string password;
+    string confirm_password;
+
+    ofstream cred("cred.txt", ios::out); // creation of ofstream obj to store credentials in "cred.txt"
+
+    // Requesting credentials from the user
+    // Username
+    cout << "Enter your username: ";
+    getline(cin, username);
+    cred << "Username: " << username << endl;
+    // Password
+    cout << "Enter your password: ";
+    getline(cin, password);
+    // Confirm password
+    cout << "Confirm your password: ";
+    getline(cin, confirm_password);
+    while (confirm_password != password) // if the password and confirm password do not match, ask the user to re-enter the password
+    {
+        cout << "Password does not match. Please re-enter your password: ";
+        getline(cin, confirm_password);
+    }
+    cred << "Password: " << password << endl;  
+    
 }
