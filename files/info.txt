@@ -1,8 +1,8 @@
-Name: Bhavesh Mankar
+Name: Mango Metha
 Age: 19
-Address: Asma
-City: Bhandara
-State: 
-Pincode: 441904
+Address: Aaam nagar, gali no.786
+City: Hapus
+State: Raas
+Pincode: 498846
 Phone Number: 2147483647
-Email: bhaweshmankar2002@gmail.coomm
+Email: mangometha786@mango.com
