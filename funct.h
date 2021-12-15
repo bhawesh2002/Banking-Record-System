@@ -58,9 +58,23 @@ void get_info() // A function that requests general information from the user
     data.close(); // close the info.txt file;
 }
 
-void set_cred() // A function that requests credentials from the user
+string get_username() // A function that requests username from the user
 {
     string username;
+    cout << "Enter the username you want to use for your account: ";
+    getline(cin, username);
+    return username;
+}
+string get_password() // A function that requests password from the user
+{
+    string password;
+    cout << "Enter your password: ";
+    getline(cin, password);
+    return password;
+}
+
+void set_cred() // A function that writes credentials entered by the user
+{
     string password;
     string confirm_password;
 
@@ -68,13 +82,9 @@ void set_cred() // A function that requests credentials from the user
 
     // Requesting credentials from the user
     // Username
-    cout << "Enter your username: ";
-    getline(cin, username);
-    cred << "Username: " << username << endl;
-    // Password
-    cout << "Enter your password: ";
-    getline(cin, password);
+    cred << "Username: " << get_username() << endl;
     // Confirm password
+    password = get_password();
     cout << "Confirm your password: ";
     getline(cin, confirm_password);
     while (confirm_password != password) // if the password and confirm password do not match, ask the user to re-enter the password
@@ -82,6 +92,5 @@ void set_cred() // A function that requests credentials from the user
         cout << "Password does not match. Please re-enter your password: ";
         getline(cin, confirm_password);
     }
-    cred << "Password: " << password << endl;  
-    
+    cred << "Password: " << confirm_password << endl;
 }
