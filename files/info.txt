@@ -1,8 +1,8 @@
-Name: Mango Metha
+Name: Mango Fell
 Age: 19
-Address: Aaam nagar, gali no.786
+Address: Aamm nagar, gali no.786 
 City: Hapus
-State: Raas
-Pincode: 498846
-Phone Number: 2147483647
-Email: mangometha786@mango.com
+State: Aammrass
+Pincode: 84561
+Phone Number: 94165465
+Email: mangofell786@gmail.com
