@@ -6,8 +6,10 @@ int main()
     cout << "Welcome to \"GIT BANK\"\n"
          << "Thank you for choosing us\n";                       // Message to greet the user
     cout << "Let's start by getting some general information\n"; // instructions to the user
-    //get_info();                                                  // function call to get general information
-    cout << "Now it's time to set uid and password\n";          // instructions to the user
+    get_info();                                                  // function call to get general information
+    cout << "Now it's time to set uid and password to access your account\n"; // instructions to the user
     set_cred();                                                  // function call to set the credentials
+    gen_acc_no();
+    cout << "Aaccount created successfully\n";
     return 0;
 }
