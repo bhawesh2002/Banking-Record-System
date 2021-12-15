@@ -94,3 +94,11 @@ void set_cred() // A function that writes credentials entered by the user
     }
     cred << "Password: " << confirm_password << endl;
 }
+
+void gen_acc_no() // a function which will generate a 10 digit account number
+{
+    int first_7 = 2008218;
+    int last_3 = rand() % 1000;
+    ofstream acc_no_file("files/acc_no.txt", ios::out); // creation of ofstream obj to store account number in "acc_no.txt"
+    acc_no_file << "Account no: " << first_7 << last_3 << endl;
+}
