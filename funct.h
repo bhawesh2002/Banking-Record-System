@@ -15,7 +15,7 @@ void get_info() // A function that requests general information from the user
     int phone_num;
     string email;
 
-    ofstream data("info.txt", ios::out); // creation of ofstream obj to store general info in "info.txt"
+    ofstream data("files/info.txt", ios::out); // creation of ofstream obj to store general info in "info.txt"
 
     // Requesting general information from the user
     // Name
@@ -64,7 +64,7 @@ void set_cred() // A function that requests credentials from the user
     string password;
     string confirm_password;
 
-    ofstream cred("cred.txt", ios::out); // creation of ofstream obj to store credentials in "cred.txt"
+    ofstream cred("files/cred.txt", ios::out); // creation of ofstream obj to store credentials in "cred.txt"
 
     // Requesting credentials from the user
     // Username
