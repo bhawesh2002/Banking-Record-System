@@ -4,12 +4,49 @@
 int main()
 {
     cout << "Welcome to \"GIT BANK\"\n"
-         << "Thank you for choosing us\n";                       // Message to greet the user
-    cout << "Let's start by getting some general information\n"; // instructions to the user
-    get_info();                                                  // function call to get general information
-    cout << "Now it's time to set uid and password to access your account\n"; // instructions to the user
-    set_cred();                                                  // function call to set the credentials
-    gen_acc_no();
-    cout << "Aaccount created successfully\n";
+         << "Thank you for choosing us\n"; // Message to greet the user
+    int opt;
+    cout << "You are a:"
+         << "\n"
+         << "1)Registered user\n2)New user\n3)Exit"; // Message to ask the user to choose the type of account
+    cout << "\nEnter your choice: ";
+    cin >> opt;
+    while (opt != 3)
+    {
+        switch (opt)
+        {
+        case 1:
+        {
+            cout << "Enter your Credentials\n";
+        }
+        break; // break the switch case
+        case 2:
+        {
+            cout << "Let's start by getting some general information\n";              // instructions to the user
+            cin.clear();                                                              // clear the input buffer
+            cin.ignore();                                                             // ignore the input buffer
+            get_info();                                                               // function call to get general information
+            cout << "Now it's time to set uid and password to access your account\n"; // instructions to the user
+            set_cred();                                                               // function call to set the credentials
+            gen_acc_no();
+            cout << "Aaccount created successfully\n";
+        }
+        break; // break the switch case
+        default:
+        {
+            cout << "Invalid option\n";
+            cout << "Please try again\n";
+            cout << "You are a:"
+                 << "\n"
+                 << "1)Registered user\n2)New user\n3)Exit"; // Message to ask the user to choose the type of account
+            cout << "\nEnter your choice: ";
+            cin >> opt;
+        }
+            continue; // continue the loop
+        }
+        break; // break the while loop
+    }
+    cout << "Thank you for using our services\n";
+
     return 0;
 }
