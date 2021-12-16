@@ -1,8 +1,8 @@
-Name: Mango Fell
+Name: Mango aadmi
 Age: 19
-Address: Aamm nagar, gali no.786 
-City: Hapus
-State: Aammrass
-Pincode: 84561
-Phone Number: 94165465
-Email: mangofell786@gmail.com
+Address: aamm nagar, gali no.786
+City: hapus
+State: raas
+Pincode: 965315
+Phone Number: 9416611234
+Email: mangoaadmi786@mango.com
