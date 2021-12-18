@@ -102,3 +102,49 @@ void gen_acc_no() // a function which will generate a 10 digit account number
     ofstream acc_no_file("files/acc_no.txt", ios::out); // creation of ofstream obj to store account number in "acc_no.txt"
     acc_no_file << "Account no: " << first_7 << last_3 << endl;
 }
+
+void tranction_info() // A function that requests transaction information from the user
+{
+    int amount;
+    string date;
+    string time;
+
+    // Requesting transaction information from the user
+    // Transaction type
+    cout << "Type of transaction: "
+         << "1) Deposit    "
+         << "2) Withdraw    "
+         << "3)Exit" << endl;
+    cout << "Enter your choice: ";
+    int opt;
+    cin >> opt;
+    while (opt != 3)
+    {
+        switch (opt)
+        {
+        case 1:
+            cout << "*****Deposit*****" << endl;
+            cout << "Enter the amount you want to deposit: ";
+            cin >> amount;
+            cout << "Proceeding to deposit..." << endl;
+            cout << "Deposit successful!" << endl;
+            break;
+        case 2:
+            cout << "*****Withdraw*****" << endl;
+            cout << "Enter the amount you want to withdraw: ";
+            cin >> amount;
+            cout << "Proceeding to withdraw..." << endl;
+            cout << "Withdraw successful!" << endl;
+            break;
+        default:
+            cout << "Invalid option!" << endl;
+            cout << "Type of transaction: "
+                 << "1) Deposit    "
+                 << "2) Withdraw    "
+                 << "3)Exit" << endl;
+            cout << "Enter your choice: ";
+            cin >> opt;
+            break;
+        }
+    }
+}
