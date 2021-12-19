@@ -120,7 +120,7 @@ void tranction_info() // A function that requests transaction information from t
     cout << "Enter your choice: ";
     int opt;
     cin >> opt;
-    while (opt != 3)
+    do
     {
         switch (opt)
         {
@@ -171,5 +171,5 @@ void tranction_info() // A function that requests transaction information from t
         }
         break;
         }
-    }
+    } while (opt != 3);
 }
