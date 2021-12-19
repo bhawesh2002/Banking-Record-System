@@ -6,18 +6,18 @@ int main()
     cout << "Welcome to \"GIT BANK\"\n"
          << "Thank you for choosing us\n"; // Message to greet the user
     int opt;
-    cout << "You are a:"
-         << "\n"
-         << "1)Registered user\n2)New user\n3)Exit"; // Message to ask the user to choose the type of account
-    cout << "\nEnter your choice: ";
-    cin >> opt;
-    while (opt != 3)
+    do
     {
+        cout << "You are a:"
+             << "\n"
+             << "1)Registered user\n2)New user\n3)Exit"; // Message to ask the user to choose the type of account
+        cout << "\nEnter your choice: ";
+        cin >> opt;
         switch (opt)
         {
         case 1:
         {
-            cout << "Enter your Credentials\n";
+            tranction_info(); // Calling the function tranction_info()
         }
         break; // break the switch case
         case 2:
@@ -32,20 +32,14 @@ int main()
             cout << "Aaccount created successfully\n";
         }
         break; // break the switch case
-        default:
+        /*default:
         {
             cout << "Invalid option\n";
             cout << "Please try again\n";
-            cout << "You are a:"
-                 << "\n"
-                 << "1)Registered user\n2)New user\n3)Exit"; // Message to ask the user to choose the type of account
-            cout << "\nEnter your choice: ";
-            cin >> opt;
         }
-            continue; // continue the loop
+        break; // break the switch case*/
         }
-        break; // break the while loop
-    }
+    } while (opt != 3);
     cout << "Thank you for using our services\n";
 
     return 0;
