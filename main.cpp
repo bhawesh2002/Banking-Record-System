@@ -17,7 +17,7 @@ int main()
         {
         case 1:
         {
-            tranction_info(); // Calling the function tranction_info()
+            tranction_info(); // function with deposit, withdraw, transfer and balance enquiry facilities
         }
         break; // break the switch case
         case 2:
@@ -25,14 +25,14 @@ int main()
             cout << "Let's start by getting some general information\n";              // instructions to the user
             cin.clear();                                                              // clear the input buffer
             cin.ignore();                                                             // ignore the input buffer
-            get_info();                                                               // function call to get general information
+            get_info();                                                               // function whicl will ask user for information
             cout << "Now it's time to set uid and password to access your account\n"; // instructions to the user
-            set_cred();                                                               // function call to set the credentials
-            gen_acc_no();
+            set_cred();                                                               // function which will set credentials
+            gen_acc_no();                                                             // function which will generate account number
             cout << "Aaccount created successfully\n";
         }
         break; // break the switch case
-        /*default:
+            /*default:
         {
             cout << "Invalid option\n";
             cout << "Please try again\n";
