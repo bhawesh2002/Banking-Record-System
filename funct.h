@@ -114,6 +114,8 @@ void tranction_info() // A function that requests transaction information from t
     cout << "Type of transaction: "
          << "1) Deposit    "
          << "2) Withdraw    "
+         << "3) Transfer    "
+         << "4) Balance Enquiry    "
          << "3)Exit" << endl;
     cout << "Enter your choice: ";
     int opt;
@@ -123,20 +125,42 @@ void tranction_info() // A function that requests transaction information from t
         switch (opt)
         {
         case 1:
+        {
             cout << "*****Deposit*****" << endl;
             cout << "Enter the amount you want to deposit: ";
             cin >> amount;
             cout << "Proceeding to deposit..." << endl;
             cout << "Deposit successful!" << endl;
-            break;
+        }
+        break;
         case 2:
+        {
             cout << "*****Withdraw*****" << endl;
             cout << "Enter the amount you want to withdraw: ";
             cin >> amount;
             cout << "Proceeding to withdraw..." << endl;
             cout << "Withdraw successful!" << endl;
-            break;
+        }
+        break;
+        case 3:
+        {
+            int acc_no;
+            cout << "*****Transfer*****" << endl;
+            cout << "Account no to which funds are being transfered: ";
+            cin >> acc_no;
+            cout << "Enter the amount you want to transfer: ";
+            cin >> amount;
+            cout << "Proceeding to transfer..." << endl;
+            cout << "Transfer successful!" << endl;
+        }
+        break;
+        case 4:
+        {
+            cout << "*****Balance Enquiry*****" << endl;
+            cout << "Available balance: " << endl;
+        }
         default:
+        {
             cout << "Invalid option!" << endl;
             cout << "Type of transaction: "
                  << "1) Deposit    "
@@ -144,7 +168,8 @@ void tranction_info() // A function that requests transaction information from t
                  << "3)Exit" << endl;
             cout << "Enter your choice: ";
             cin >> opt;
-            break;
+        }
+        break;
         }
     }
 }
