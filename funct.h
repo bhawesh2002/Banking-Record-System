@@ -108,20 +108,20 @@ void tranction_info() // A function that requests transaction information from t
     int amount;
     string date;
     string time;
-
-    // Requesting transaction information from the user
-    // Transaction type
-    cout << "Type of transaction: "
-         << "1) Deposit    "
-         << "2) Withdraw    "
-         << "3) Transfer    "
-         << "4) Balance Enquiry    "
-         << "3)Exit" << endl;
-    cout << "Enter your choice: ";
     int opt;
-    cin >> opt;
+
     do
     {
+        // Requesting transaction information from the user
+        // Transaction type
+        cout << "Type of transaction: "
+             << "1) Deposit    "
+             << "2) Withdraw    "
+             << "3) Transfer    "
+             << "4) Balance Enquiry    "
+             << "5) Exit" << endl;
+        cout << "Enter your choice: ";
+        cin >> opt;
         switch (opt)
         {
         case 1:
@@ -149,6 +149,8 @@ void tranction_info() // A function that requests transaction information from t
             cout << "Account no to which funds are being transfered: ";
             cin >> acc_no;
             cout << "Enter the amount you want to transfer: ";
+            cin.clear();
+            cin.ignore();
             cin >> amount;
             cout << "Proceeding to transfer..." << endl;
             cout << "Transfer successful!" << endl;
@@ -159,17 +161,12 @@ void tranction_info() // A function that requests transaction information from t
             cout << "*****Balance Enquiry*****" << endl;
             cout << "Available balance: " << endl;
         }
-        default:
+        /*default:
         {
             cout << "Invalid option!" << endl;
-            cout << "Type of transaction: "
-                 << "1) Deposit    "
-                 << "2) Withdraw    "
-                 << "3)Exit" << endl;
-            cout << "Enter your choice: ";
-            cin >> opt;
+            cout << "Please try again\n";
         }
-        break;
+        break;*/
         }
-    } while (opt != 3);
+    } while (opt != 5);
 }
