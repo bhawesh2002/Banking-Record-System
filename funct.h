@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -110,63 +111,64 @@ void tranction_info() // A function that requests transaction information from t
     string time;
     int opt;
 
-    do
+    // Requesting transaction information from the user
+    // Transaction type
+    cout << "Type of transaction: "
+         << "1) Deposit    "
+         << "2) Withdraw    "
+         << "3) Transfer    "
+         << "4) Balance Enquiry    "
+         << "5) Exit" << endl;
+    cout << "Enter your choice: ";
+    cin >> opt;
+    switch (opt)
     {
-        // Requesting transaction information from the user
-        // Transaction type
-        cout << "Type of transaction: "
-             << "1) Deposit    "
-             << "2) Withdraw    "
-             << "3) Transfer    "
-             << "4) Balance Enquiry    "
-             << "5) Exit" << endl;
-        cout << "Enter your choice: ";
-        cin >> opt;
-        switch (opt)
-        {
-        case 1:
-        {
-            cout << "*****Deposit*****" << endl;
-            cout << "Enter the amount you want to deposit: ";
-            cin >> amount;
-            cout << "Proceeding to deposit..." << endl;
-            cout << "Deposit successful!" << endl;
-        }
-        break;
-        case 2:
-        {
-            cout << "*****Withdraw*****" << endl;
-            cout << "Enter the amount you want to withdraw: ";
-            cin >> amount;
-            cout << "Proceeding to withdraw..." << endl;
-            cout << "Withdraw successful!" << endl;
-        }
-        break;
-        case 3:
-        {
-            int acc_no;
-            cout << "*****Transfer*****" << endl;
-            cout << "Account no to which funds are being transfered: ";
-            cin >> acc_no;
-            cout << "Enter the amount you want to transfer: ";
-            cin.clear();
-            cin.ignore();
-            cin >> amount;
-            cout << "Proceeding to transfer..." << endl;
-            cout << "Transfer successful!" << endl;
-        }
-        break;
-        case 4:
-        {
-            cout << "*****Balance Enquiry*****" << endl;
-            cout << "Available balance: " << endl;
-        }
-        /*default:
-        {
-            cout << "Invalid option!" << endl;
-            cout << "Please try again\n";
-        }
-        break;*/
-        }
-    } while (opt != 5);
+    case 1:
+    {
+        cout << "*****Deposit*****" << endl;
+        cout << "Enter the amount you want to deposit: ";
+        cin >> amount;
+        cout << "Proceeding to deposit..." << endl;
+        cout << "Deposit successful!" << endl;
+    }
+    break;
+    case 2:
+    {
+        cout << "*****Withdraw*****" << endl;
+        cout << "Enter the amount you want to withdraw: ";
+        cin >> amount;
+        cout << "Proceeding to withdraw..." << endl;
+        cout << "Withdraw successful!" << endl;
+    }
+    break;
+    case 3:
+    {
+        int acc_no;
+        cout << "*****Transfer*****" << endl;
+        cout << "Account no to which funds are being transfered: ";
+        cin >> acc_no;
+        cout << "Enter the amount you want to transfer: ";
+        cin.clear();
+        cin.ignore();
+        cin >> amount;
+        cout << "Proceeding to transfer..." << endl;
+        cout << "Transfer successful!" << endl;
+    }
+    break;
+    case 4:
+    {
+        cout << "*****Balance Enquiry*****" << endl;
+        cout << "Available balance: " << endl;
+    }
+    break;
+    case 5:
+    {
+        exit(0);
+    }
+    default:
+    {
+        cout << "Invalid option!" << endl;
+    }
+    break;
+    }
 }
