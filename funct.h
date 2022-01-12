@@ -163,11 +163,12 @@ void tranction_info() // A function that requests transaction information from t
     break;
     case 5:
     {
+        cout << "Thank you for using our services!" << endl;
         exit(0);
     }
     default:
     {
-        cout << "Invalid option!" << endl;
+        cerr << "Invalid option!" << endl;
     }
     break;
     }
