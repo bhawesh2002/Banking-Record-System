@@ -34,7 +34,7 @@ int main()
         break; // break the switch case
         default:
         {
-            cout << "Invalid option\n";
+            cerr << "Invalid option\n";
             cout << "You are a:"
                  << "\n"
                  << "1)Registered user\n2)New user\n3)Exit"; // Message to ask the user to choose the type of account
